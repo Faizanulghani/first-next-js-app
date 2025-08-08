@@ -1,9 +1,14 @@
+import Navigation from "./components/Navigation";
+import "./globals.css";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <h2>This is Root Layout</h2>
-        {children}
+        <div className="max-w-[80%] mx-auto">
+          <Navigation />
+
+          {children}
+        </div>
       </body>
     </html>
   );
