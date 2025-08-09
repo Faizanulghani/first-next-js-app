@@ -5,7 +5,7 @@ const Navigation = () => {
       <div className="flex items-center justify-between">
         <h2>Faizan Logo</h2>
         <nav>
-          <ul className="flex gap-4">
+          <ul className="flex gap-4 font-work-sans">
             <li>
               <Link href="/">Home</Link>
             </li>
