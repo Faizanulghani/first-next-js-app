@@ -1,6 +1,11 @@
 import Image from "next/image";
 import ai from "@/public/ai.jpg";
 
+export const metadata = {
+  title: "Service Page",
+  description: "This is Service Page",
+  keywords: ["nextjs", "reactjs", "tailwindcss"],
+};
 const page = () => {
   return (
     <div className="flex gap-4">
