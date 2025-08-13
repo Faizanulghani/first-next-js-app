@@ -1,8 +1,6 @@
 "use client";
 
-import { Suspense } from "react";
 import DataCard from "./DataCard";
-import Load from "./Load";
 import { useSearchParams } from "next/navigation";
 
 const DataFetchServer = () => {
@@ -26,11 +24,7 @@ const DataFetchServer = () => {
     );
   }
 
-  return (
-    <Suspense fallback={<Load />}>
-      <DataCard userName={userName} />
-    </Suspense>
-  );
+  return <DataCard userName={userName} />;
 };
 
 export default DataFetchServer;

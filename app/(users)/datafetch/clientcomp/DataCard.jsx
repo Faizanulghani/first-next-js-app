@@ -1,8 +1,9 @@
 import { User, Users, Star, TrendingUp } from "lucide-react";
 import { useEffect, useState } from "react";
+import Load from "../loading";
 
 const DataCard = ({ userName }) => {
-  let [userInfo, setUserInfo] = useState({});
+  let [userInfo, setUserInfo] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
       let response = await fetch(`https://api.genderize.io/?name=${userName}`);
@@ -12,13 +13,13 @@ const DataCard = ({ userName }) => {
 
     fetchData();
   }, []);
+
+  if (!userInfo) {
+    return <Load />;
+  }
+
   const isMale = userInfo.gender === "male";
   const confidencePercentage = userInfo.probability * 100;
-  // await new Promise((resolve) => {
-  //   setTimeout(() => {
-  //     resolve();
-  //   }, 500);
-  // });
 
   if (!userInfo.gender) return null;
 

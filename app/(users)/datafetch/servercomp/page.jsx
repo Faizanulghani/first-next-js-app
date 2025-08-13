@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import DataCard from "./DataCard";
-import Load from "./Load";
+import Load from "../loading";
 
 const DataFetchServer = async (props) => {
   const searchParams = await props.searchParams;
