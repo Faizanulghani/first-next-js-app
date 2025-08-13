@@ -1,10 +1,13 @@
+"use client";
+
 import { Suspense } from "react";
 import DataCard from "./DataCard";
 import Load from "./Load";
+import { useSearchParams } from "next/navigation";
 
-const DataFetchServer = async (props) => {
-  const searchParams = await props.searchParams;
-  const userName = searchParams.name;
+const DataFetchServer = () => {
+  const searchParams = useSearchParams();
+  const userName = searchParams.get("name");
 
   if (!userName) {
     return (
