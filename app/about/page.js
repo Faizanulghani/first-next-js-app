@@ -1,7 +1,9 @@
-const Aboutpage = () => {
-  return (
-    <div>About page</div>
-  )
-}
+export const metadata = {
+  title: "About",
+};
 
-export default Aboutpage 
+const Aboutpage = () => {
+  return <div>About page</div>;
+};
+
+export default Aboutpage;
